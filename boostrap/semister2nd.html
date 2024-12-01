@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subject PDF Viewer</title>
+    <style>
+        /* General body styling */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Poppins', Arial, sans-serif;
+            background: linear-gradient(120deg, #f3f4f6, #e3e9f2);
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Header styling */
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #4a4a4a;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Container for buttons */
+        .button-container {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            padding: 20px;
+            border-radius: 12px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Styling for each button */
+        .subject-button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #ffd6a5, #fdcfe8);
+            color: #333;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Hover effect for buttons */
+        .subject-button:hover {
+            background: linear-gradient(135deg, #fdcfe8, #ffd6a5);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(-4px);
+        }
+
+        /* Back button styling */
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: #f3f4f6;
+            color: #333;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            display: none; /* Initially hidden */
+        }
+
+        /* Hover effect for back button */
+        .back-button:hover {
+            background: #e3e9f2;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* PDF viewer section */
+        .view-container {
+            margin-top: 30px;
+            width: 100%;
+            max-width: 850px;
+            height: 500px;
+            border-radius: 15px;
+            overflow: hidden;
+            background-color: #fff;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            display: none; /* Initially hidden */
+        }
+
+        /* Iframe styling */
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Subject PDF Viewer</h1>
+
+    <button class="back-button" id="backButton" onclick="openInNewTab()">↗ Open in New Tab</button>
+
+    <div class="button-container">
+        <button class="subject-button" onclick="showPDF('pdfs/subject1.pdf')">Subject 1</button>
+        <button class="subject-button" onclick="showPDF('pdfs/subject2.pdf')">Subject 2</button>
+        <button class="subject-button" onclick="showPDF('pdfs/subject3.pdf')">Subject 3</button>
+        <button class="subject-button" onclick="showPDF('pdfs/subject4.pdf')">Subject 4</button>
+        <button class="subject-button" onclick="showPDF('pdfs/subject5.pdf')">Subject 5</button>
+    </div>
+
+    <!-- PDF view section -->
+    <div id="viewContainer" class="view-container">
+        <iframe id="pdfViewer" src=""></iframe>
+    </div>
+
+    <script>
+        let currentPDF = "";
+
+        function showPDF(pdfUrl) {
+            currentPDF = pdfUrl; // Save the current PDF URL
+            const viewContainer = document.getElementById("viewContainer");
+            const pdfViewer = document.getElementById("pdfViewer");
+            const backButton = document.getElementById("backButton");
+
+            // Display the container and back button
+            viewContainer.style.display = "block";
+            backButton.style.display = "block";
+            
+            // Set iframe source and disable download
+            pdfViewer.src = `https://docs.google.com/viewer?embedded=true&url=${encodeURIComponent(pdfUrl)}`;
+        }
+
+        function openInNewTab() {
+            if (currentPDF) {
+                window.open(currentPDF, "_blank");
+            }
+        }
+    </script>
+
+</body>
+</html>

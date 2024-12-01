@@ -1,0 +1,301 @@
+
+.copyright{
+  
+  text-align: center;
+
+
+}
+footer{
+    color: white;
+    background-color: black;
+}
+.container{
+    margin-top: 20px;
+   
+}
+.card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+  }
+
+  .footer-bottom li a{
+    color: white;
+  }
+  .footer-bottom .ms-3 a i{
+font-size: 22px;
+padding: 5px;
+
+  }
+  .row .col-md-6 .row.shadow-sm:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
+    border-radius: 10px !important;
+  }
+  .stretched-link:hover{
+    color: rgb(9, 9, 9);
+  }
+  .nav-link:hover{
+    color: rgb(239, 234, 234) !important;
+  }
+  .second{
+    height: 300px;
+    width: 100%;
+  }
+      .flex-md-row{
+        border-radius: 20px !important;
+      }
+      .semester-btn {
+        display: block;
+        width: 150px;
+        margin: 10px auto;
+        color: white;
+        background-color: #007bff;
+        border: none;
+        padding: 10px;
+        font-size: 16px;
+        text-align: center;
+        transition: background-color 0.3s ease;
+      }
+      .semester-btn:hover {
+        background-color: #0056b3 !important;
+        color: white !important;
+      }
+  
+      .section-title {
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+      }
+  
+      .container-flex {
+        display: flex;
+        justify-content: space-between;
+      }
+      .semester-section {
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
+  
+      .semester-header {
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        color: white;
+        padding: 10px;
+        border-radius: 5px 5px 0 0;
+      }
+  
+      .subject-btn {
+        width: 100%;
+        margin: 5px 0;
+        transition: background-color 0.3s ease;
+        font-size: 16px;
+      }
+  
+      .subject-btn:hover {
+        background-color: #0056b3 !important;
+        color: white !important;
+      }
+  
+      .footer {
+        background-color: #333;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+      }
+      footer .text-muted{
+        color: antiquewhite !important;
+      } 
+      .semisterquestion{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 15px;
+        padding-left: 30px;
+        border-left: 2px solid #ececec;
+        
+
+      }
+      .semisternote{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 15px;
+        margin-right: 30px;
+      }
+      .semester-btn{
+        width: 100%;
+
+      }
+    .semisterquestion .semester-btn {
+      background-color: #e14177;
+    }
+    .semisterquestion .semester-btn:hover{
+      background-color: #a02e54 !important;
+    }
+   .img-fluid.individual{
+height: 200px !important;
+border-radius: 40px;
+width:85% !important;
+   }
+   .cover-image img{
+   object-fit: contain;
+    width: 100%;
+    height: auto;
+   }
+   .cover-image{
+    display: flex;
+    align-items: center;
+   }
+   .mb-0{
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+   }
+   .pragraph{
+    display:-webkit-box ;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient:vertical ;
+    overflow: hidden;
+   }
+
+    .navbar-nav .nav-item:hover .dropdown-menu{
+      display: block;
+    }
+    
+.carousel.slide{
+  position: relative;
+}
+
+.carousel.slide::before{
+  position:absolute;
+  content: '';
+  background-color: rgba(0, 0, 0, 0.35);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.carousel-caption{
+  z-index: 2;
+}
+.container {
+  margin-top: 30px;
+}
+
+.card {
+  border: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.text-primary {
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.text-primary:hover {
+  color: #0056b3;
+}
+
+.img-fluid {
+  object-fit: cover;
+  max-height: 150px;
+}
+
+.shadow-sm {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.text-success {
+  font-weight: 600;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Image Styling */
+.img-fluid {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .img-fluid {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* Card Title */
+.card-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.card:hover .card-title {
+  color: #007bff;
+}
+
+/* Card Text */
+.card-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #6c757d;
+  transition: color 0.3s ease;
+}
+
+.card:hover .card-text {
+  color: #495057;
+}
+
+/* Link Styling */
+.text-primary {
+  text-decoration: none;
+  font-weight: 500;
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+.text-primary:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Shadow Effect */
+.shadow-sm {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Strong Text */
+.text-success {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #28a745;
+  transition: color 0.3s ease;
+}
+
+.card:hover .text-success {
+  color: #218838;
+}
